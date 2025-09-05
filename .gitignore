@@ -1,0 +1,10 @@
+# Ignore common files and folders
+node_modules/
+.env
+dist/
+build/
+*.log
+.DS_Store
+*.pyc
+__pycache__/
+# Add any other files/folders to ignore below
