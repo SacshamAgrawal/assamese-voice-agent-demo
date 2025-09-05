@@ -55,27 +55,10 @@ export const SessionView = ({
     if (sessionStarted) {
       const timeout = setTimeout(() => {
         if (!isAgentAvailable(agentState)) {
-          const reason =
-            agentState === "connecting"
-              ? "Agent did not join the room. "
-              : "Agent connected but did not complete initializing. ";
-
           toastAlert({
-            title: "Session ended",
-            description: (
-              <p className="w-full">
-                {reason}
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://docs.livekit.io/agents/start/voice-ai/"
-                  className="whitespace-nowrap underline"
-                >
-                  See quickstart guide
-                </a>
-                .
-              </p>
-            ),
+            title: "Session Ended",
+            description:
+              "The Assamese AI Agent session has ended. Please refresh the page to start a new session.",
           });
           room.disconnect();
         }
@@ -171,7 +154,7 @@ export const SessionView = ({
                 )}
               >
                 <p className="animate-text-shimmer inline-block !bg-clip-text text-sm font-semibold text-transparent">
-                  Agent is listening, ask it a question
+                  Assamese AI Agent is ready - start speaking
                 </p>
               </motion.div>
             )}

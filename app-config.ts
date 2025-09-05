@@ -1,20 +1,20 @@
 import type { AppConfig } from "./lib/types";
 
 export const APP_CONFIG_DEFAULTS: AppConfig = {
-  companyName: "LiveKit",
-  pageTitle: "LiveKit Voice Agent",
-  pageDescription: "A voice agent built with LiveKit",
+  companyName: "Pathnovo Solutions",
+  pageTitle: "Assamese Voice Agent - Pathnovo Solutions",
+  pageDescription: "Experience our advanced Assamese voice agent powered by Pathnovo Solutions",
 
   supportsChatInput: true,
   supportsVideoInput: true,
   supportsScreenShare: true,
   isPreConnectBufferEnabled: true,
 
-  logo: "/lk-logo.svg",
+  logo: "",
   accent: "#002cf2",
-  logoDark: "/lk-logo-dark.svg",
+  logoDark: "",
   accentDark: "#1fd5f9",
-  startButtonText: "Start call",
+  startButtonText: "Start Voice Session",
 
   agentName: undefined,
 };

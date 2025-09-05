@@ -33,10 +33,11 @@ export function App({ appConfig }: AppProps) {
       setSessionStarted(false);
       refreshConnectionDetails();
     };
-    const onMediaDevicesError = (error: Error) => {
+    const onMediaDevicesError = (_error: Error) => {
       toastAlert({
-        title: "Encountered an error with your media devices",
-        description: `${error.name}: ${error.message}`,
+        title: "Media Device Error",
+        description:
+          "Please check your microphone and camera permissions to use the Assamese AI Agent.",
       });
     };
     room.on(RoomEvent.MediaDevicesError, onMediaDevicesError);
@@ -71,8 +72,9 @@ export function App({ appConfig }: AppProps) {
         }
 
         toastAlert({
-          title: "There was an error connecting to the agent",
-          description: `${error.name}: ${error.message}`,
+          title: "Connection Error",
+          description:
+            "Unable to connect to the Assamese AI Agent. Please try again.",
         });
       });
     }
